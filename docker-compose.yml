@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  node:
+    image: node:alpine
+    volumes:
+      - ./:/scripts
+    working_dir: /scripts
+    entrypoint: node server.js
+    ports:
+      - 3000:3000
